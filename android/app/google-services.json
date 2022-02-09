@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "123847544512",
+    "project_id": "umsfri",
+    "storage_bucket": "umsfri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123847544512:android:f24d08710258447542a725",
+        "android_client_info": {
+          "package_name": "com.example.umpds_test_sixedit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123847544512-mnrng50521ll5b19bvdgjphri4dvb3vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ_tTHTxGPn5LozLXwt4L9kxUA73BCR_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123847544512-mnrng50521ll5b19bvdgjphri4dvb3vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
