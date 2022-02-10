@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:umpds_test_sixedit/Welcome/login_screen.dart';
-import 'package:umpds_test_sixedit/Admin/admin_dashboard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:umpds_test_sixedit/Welcome/welcome.dart';
-import 'package:umpds_test_sixedit/Student/student_result.dart';
 import 'package:umpds_test_sixedit/Student/Quiz/quizadaptability.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:umpds_test_sixedit/Student/Quiz/result.dart';
 import 'newresult.dart';
-import 'student_profile2.dart';
 import 'package:umpds_test_sixedit/profile.dart';
 
 

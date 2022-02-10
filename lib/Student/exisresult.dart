@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:umpds_test_sixedit/Student/student_dashboard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:umpds_test_sixedit/Services/users.dart';
 
 class ExistResult extends StatefulWidget {
   final int nadapScore;

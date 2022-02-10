@@ -3,6 +3,7 @@ class UserModel {
   String? email;
   String? username;
   String? faculty;
+  // String? department;
   String? year;
 
   UserModel({this.uid, this.email, this.username, this.faculty, this.year});
@@ -14,8 +15,8 @@ class UserModel {
       email: map['email'],
       username: map['username'],
       faculty: map['faculty'],
+      // department: map['department'],
       year: map['year'],
-
     );
   }
 
@@ -25,8 +26,9 @@ class UserModel {
       'uid': uid,
       'email': email,
       'username': username,
-      'faculty':faculty,
-      'year':year,
+      'faculty': faculty,
+      // 'department': department,
+      'year': year,
     };
   }
 }

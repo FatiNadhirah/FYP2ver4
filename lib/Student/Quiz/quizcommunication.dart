@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:umpds_test_sixedit/Student/student_dashboard.dart';
 import 'quizadaptability.dart';
 import 'quizcreativity.dart';
 import 'package:page_transition/page_transition.dart';
-import 'result.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class quizCom extends StatefulWidget {

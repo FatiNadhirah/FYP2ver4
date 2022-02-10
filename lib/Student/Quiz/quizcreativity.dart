@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:umpds_test_sixedit/Student/student_dashboard.dart';
 import 'quizcommunication.dart';
 import 'quizemotional.dart';
 import 'package:firebase_auth/firebase_auth.dart';
