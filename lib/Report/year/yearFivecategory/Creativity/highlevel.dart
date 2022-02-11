@@ -8,7 +8,7 @@ class CreaHigh extends StatefulWidget {
 
 class _CreaHighState extends State<CreaHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "High").where("year", isEqualTo: "1").snapshots();
+  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "High").where("year", isEqualTo: "5").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _CreaHighState extends State<CreaHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > High Creativity'),
+        title: Text('Year 5 > High Creativity'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

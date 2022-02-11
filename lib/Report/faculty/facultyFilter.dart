@@ -3,6 +3,9 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'facultyDentistrycategory/dentristrycategory.dart';
 import 'facultyEngineeringcategory/engineeringcategory.dart';
 import 'facultyFSKTMcategory/FSKTMcategory.dart';
+import 'facultyEducationcategory/Educationcategory.dart';
+import 'facultyLanguagecategory/Languagecategory.dart';
+import 'facultySciencecategory/Sciencecategory.dart';
 
 class FacultyFilter extends StatefulWidget {
   const FacultyFilter({Key? key}) : super(key: key);
@@ -151,9 +154,123 @@ class _FacultyFilterState extends State<FacultyFilter> {
             ),
           ),
 
+          //Education
+          Material( color: Colors.grey[300],
+            elevation: 10.0,
+            shadowColor: Colors.grey,
+            borderRadius: BorderRadius.circular(24.0),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //text
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Education())); //Adaptability/level.dart
+                            },
+                            child: Text("Education",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          //Language
+          Material( color: Colors.cyanAccent[300],
+            elevation: 10.0,
+            shadowColor: Colors.grey,
+            borderRadius: BorderRadius.circular(24.0),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //text
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Language())); //Adaptability/level.dart
+                            },
+                            child: Text("Language",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          //Science
+          Material( color: Colors.amberAccent[300],
+            elevation: 10.0,
+            shadowColor: Colors.grey,
+            borderRadius: BorderRadius.circular(24.0),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //text
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Science())); //Adaptability/level.dart
+                            },
+                            child: Text("Science",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
 
         ],
         staggeredTiles: [
+          StaggeredTile.extent(2, 70.0),
+          StaggeredTile.extent(2, 70.0),
+          StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),

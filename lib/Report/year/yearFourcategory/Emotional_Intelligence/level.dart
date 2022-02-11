@@ -26,7 +26,7 @@ class _EmoLevelState extends State<EmoLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > Emotional Intelligence',
+        title: Text('Year 4 > Emotional Intelligence',
           style: TextStyle(
             color: Colors.white,
           ),),

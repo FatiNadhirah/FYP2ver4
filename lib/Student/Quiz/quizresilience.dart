@@ -119,7 +119,7 @@ class _quizResiState extends State<quizResi> {
                       firestoreInstance.collection("users").doc(firebaseUser?.uid).set(
                           {
                             "resiScore" : resiMarks/(resiLength*10)*100,
-                            if(resiMarks/(resiLength*10)*100 > 50)
+                            if(resiMarks/(resiLength*10)*100 > 50 )
                               "resiLevel" : "High",
                             if(resiMarks/(resiLength*10)*100 < 50)
                               "resiLevel" : "Low",

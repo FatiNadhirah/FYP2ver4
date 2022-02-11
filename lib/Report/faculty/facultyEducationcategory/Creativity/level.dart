@@ -26,7 +26,7 @@ class _CreaLevelState extends State<CreaLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Creativity',
+        title: Text('Education > Creativity',
           style: TextStyle(
             color: Colors.white,
           ),),

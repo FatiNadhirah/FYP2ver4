@@ -3,6 +3,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'yearOnecategory/year1category.dart';
 import 'yearTwocategory/year2category.dart';
 import 'yearThreecategory/year3category.dart';
+import 'yearFourcategory/year4category.dart';
+import 'yearFivecategory/year5category.dart';
 
 class YearFilter extends StatefulWidget {
   const YearFilter({Key? key}) : super(key: key);
@@ -39,7 +41,7 @@ class _YearFilterState extends State<YearFilter> {
         children: [
 
           //Year One
-          Material( color: Colors.blue[200],
+          Material( color: Colors.grey[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -76,7 +78,7 @@ class _YearFilterState extends State<YearFilter> {
           ),
 
           //Year Two
-          Material( color: Colors.blue[400],
+          Material( color: Colors.grey[400],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -114,7 +116,7 @@ class _YearFilterState extends State<YearFilter> {
           ),
 
           //Personality Category
-          Material( color: Colors.blue[600],
+          Material( color: Colors.grey[600],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -151,9 +153,85 @@ class _YearFilterState extends State<YearFilter> {
             ),
           ),
 
+          //Year Four
+          Material( color: Colors.grey[400],
+            elevation: 10.0,
+            shadowColor: Colors.grey,
+            borderRadius: BorderRadius.circular(24.0),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+
+                        //text
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => YearFour()));
+                            },
+                            child: Text("Four",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          //Year Five
+          Material( color: Colors.grey[200],
+            elevation: 10.0,
+            shadowColor: Colors.grey,
+            borderRadius: BorderRadius.circular(24.0),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //text
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => YearFive())); //Adaptability/level.dart
+                            },
+                            child: Text("Five",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
 
         ],
         staggeredTiles: [
+          StaggeredTile.extent(2, 70.0),
+          StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),
           StaggeredTile.extent(2, 70.0),

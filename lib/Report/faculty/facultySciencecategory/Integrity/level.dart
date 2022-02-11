@@ -26,7 +26,7 @@ class _IntegLevelState extends State<IntegLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Integrity',
+        title: Text('Science > Integrity',
           style: TextStyle(
             color: Colors.white,
           ),),

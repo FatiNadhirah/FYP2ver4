@@ -10,6 +10,7 @@ class StudentProfile2 extends StatefulWidget {
 }
 
 class _StudentProfile2State extends State<StudentProfile2> {
+
   Widget textfield({required String hintText}) {
     return Material(
       elevation: 4,
@@ -34,11 +35,15 @@ class _StudentProfile2State extends State<StudentProfile2> {
     );
   }
 
+  String userid = "userid";
   String myEmail = "email";
   String username = "username";
-  String userid = "userid";
   String faculty = "faculty";
+  String department = "department";
   String year = "year";
+
+  final firestoreInstance = FirebaseFirestore.instance;
+  var firebaseUser = FirebaseAuth.instance.currentUser;
 
 
   @override
@@ -63,9 +68,9 @@ class _StudentProfile2State extends State<StudentProfile2> {
       ),
       body: Center(
         child: FutureBuilder(
-          future:  _fetch(),
-          builder: (context, snapshot){
-            if(snapshot.connectionState != ConnectionState.done)
+          future: _fetch(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState != ConnectionState.done)
               return Text("Loading data..  Please wait");
             return Stack(
               alignment: Alignment.center,
@@ -86,26 +91,33 @@ class _StudentProfile2State extends State<StudentProfile2> {
                             hintText: "Username: " '$username',
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           textfield(
-                            hintText: "Email: "'$myEmail',
+                            hintText: "Email: " '$myEmail',
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           textfield(
                             hintText: "Faculty: " '$faculty',
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           textfield(
-                            hintText: "Current Year: " '$year',
+                            hintText: "Department: " '$department',
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          textfield(
+                            hintText: "Year: " '$year',
                           ),
                           SizedBox(
                             height: 50,
                           ),
+
                         ],
                       ),
                     )
@@ -121,14 +133,18 @@ class _StudentProfile2State extends State<StudentProfile2> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(padding: EdgeInsets.all(10),
-                      child: Text("",
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "",
                         style: TextStyle(
                           fontSize: 25,
                           letterSpacing: 1.5,
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
-                        ),),),
+                        ),
+                      ),
+                    ),
                     Container(
                       padding: EdgeInsets.all(5.0),
                       width: MediaQuery.of(context).size.width / 2.5,
@@ -160,7 +176,6 @@ class _StudentProfile2State extends State<StudentProfile2> {
                 ),
               ],
             );
-
           },
         ),
       ),
@@ -172,28 +187,27 @@ class _StudentProfile2State extends State<StudentProfile2> {
     if (firebaseUser != null)
       await FirebaseFirestore.instance.collection('users').doc(firebaseUser.uid)
           .get().then((DocumentSnapshot ds) {
+        userid = ds['uid'];
         username = ds['username'];
         myEmail = ds['email'];
-        userid = ds['userid'];
         faculty = ds['faculty'];
         year = ds['year'];
+        department = ds['department'];
         print(username);
         print(myEmail);
-        print(userid);
         print(faculty);
+        print(department);
         print(year);
       }).catchError((e) {
         print(e);
       });
   }
-
 }
 
 class HeaderCurvedContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
-      ..color = Colors.blueAccent;
+    Paint paint = Paint()..color = Colors.blueAccent;
     Path path = Path()
       ..relativeLineTo(0, 150)
       ..quadraticBezierTo(size.width / 2, 150, size.width, 150)

@@ -15,7 +15,8 @@ class quizAdap extends StatefulWidget {
 class _quizAdapState extends State<quizAdap> {
 
 
-  final Stream<QuerySnapshot> _usersStream1 = FirebaseFirestore.instance.collection('QuestionList').where("category",isEqualTo: "Adaptability").snapshots();
+  final Stream<QuerySnapshot> _usersStream1 =
+  FirebaseFirestore.instance.collection('QuestionList').where("category",isEqualTo: "Adaptability").snapshots();
 
   final firestoreInstance = FirebaseFirestore.instance;
   var firebaseUser = FirebaseAuth.instance.currentUser;

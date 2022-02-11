@@ -26,7 +26,7 @@ class _ComLevelState extends State<ComLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Communication',
+        title: Text('Education > Communication',
           style: TextStyle(
             color: Colors.white,
           ),),

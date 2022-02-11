@@ -26,7 +26,7 @@ class _AdapLevelState extends State<AdapLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Communication Report',
+        title: Text('Adaptability Report',
           style: TextStyle(
             color: Colors.white,
           ),),

@@ -65,7 +65,7 @@ class _MindLowState extends State<MindLow> {
                         ),
                         child: ListTile(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(0),
                             side: BorderSide(
                               color: Colors.black,
                             ),
@@ -76,9 +76,15 @@ class _MindLowState extends State<MindLow> {
                               fontSize: 20,
                             ),
                           ),
-                          // subtitle: Text(
-                          //     snapshot.data!.docChanges[index].doc['email']
-                          // ),
+                          subtitle: Text(
+                              snapshot.data!.docChanges[index].doc['faculty'] + "         " + snapshot.data!.docChanges[index].doc['department']
+                          ),
+                          trailing: Text(
+                            (snapshot.data!.docChanges[index].doc['mindScore']).toStringAsFixed(0) + "%",
+                            style: TextStyle(
+                                fontSize: 20
+                            ),
+                          ),
                           contentPadding: EdgeInsets.symmetric(
                             horizontal: 16,
                             vertical: 6,

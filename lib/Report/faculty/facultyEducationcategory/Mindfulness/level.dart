@@ -26,7 +26,7 @@ class _MindLevelState extends State<MindLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Mindfulness',
+        title: Text('Education > Mindfulness',
           style: TextStyle(
             color: Colors.white,
           ),),

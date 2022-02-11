@@ -8,7 +8,7 @@ class AdapHigh extends StatefulWidget {
 
 class _AdapHighState extends State<AdapHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("adapLevel",isEqualTo: "High").where("year", isEqualTo: "1").snapshots();
+  FirebaseFirestore.instance.collection('users').where("adapLevel",isEqualTo: "High").where("year", isEqualTo: "5").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _AdapHighState extends State<AdapHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > High Adaptability'),
+        title: Text('Year 5 > High Adaptability'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

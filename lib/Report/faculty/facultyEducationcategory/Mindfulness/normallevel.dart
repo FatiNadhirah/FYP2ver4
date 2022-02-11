@@ -8,7 +8,7 @@ class MindNormal extends StatefulWidget {
 
 class _MindNormalState extends State<MindNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("mindLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("mindLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "Education").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _MindNormalState extends State<MindNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Normal Mindfulness'),
+        title: Text('Education > Normal Mindfulness'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

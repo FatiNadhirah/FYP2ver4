@@ -10,7 +10,7 @@ class UserManagement {
     FirebaseFirestore.instance
         .collection('users')
         .doc(firebaseUser?.uid)
-        .set({'email': user.email, 'uid': user.uid})
+        .set({'email': user.email, 'uid': user.uid, 'faculty':user.faculty,'department':user.department, 'year':user.year})
         .then((value) => Navigator.push(
         context, MaterialPageRoute(builder: (context) => Profile())))
         .catchError((e) {
@@ -25,7 +25,7 @@ class UserManagement2 {
     FirebaseFirestore.instance
         .collection('users')
         .doc(firebaseUser?.uid)
-        .set({'email': user.email, 'uid': user.uid, 'faculty':user.faculty, 'year':user.year})
+        .set({'email': user.email, 'uid': user.uid, 'faculty':user.faculty,'department':user.department, 'year':user.year})
         .then((value) => Navigator.push(
         context, MaterialPageRoute(builder: (context) => StudentProfile2())))
         .catchError((e) {

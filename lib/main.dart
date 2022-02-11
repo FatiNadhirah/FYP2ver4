@@ -3,7 +3,6 @@ import 'package:umpds_test_sixedit/Welcome/welcome.dart';
 import 'package:umpds_test_sixedit/Welcome/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:umpds_test_sixedit/Admin/admin_dashboard.dart';
-import 'package:umpds_test_sixedit/Dummy/score.dart';
 import 'package:umpds_test_sixedit/Student/Quiz/quizadaptability.dart';
 import 'package:umpds_test_sixedit/Admin/report.dart';
 

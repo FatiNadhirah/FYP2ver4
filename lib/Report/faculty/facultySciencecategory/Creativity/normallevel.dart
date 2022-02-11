@@ -9,7 +9,7 @@ class CreaNormal extends StatefulWidget {
 
 class _CreaNormalState extends State<CreaNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "Science").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _CreaNormalState extends State<CreaNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Normal Creativity'),
+        title: Text('Science > Normal Creativity'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

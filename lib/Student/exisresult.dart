@@ -4,14 +4,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class ExistResult extends StatefulWidget {
-  final int nadapScore;
-  final int ncomScore;
-  final int ncreaScore;
-  final int nemoScore;
-  final int nintegScore;
-  final int nmindScore;
-  final int nresiScore;
-  final int nteamScore;
+  final double nadapScore;
+  final double ncomScore;
+  final double ncreaScore;
+  final double nemoScore;
+  final double nintegScore;
+  final double nmindScore;
+  final double nresiScore;
+  final double nteamScore;
   const ExistResult({Key? key, required this.nadapScore,
                               required this.ncomScore,
                               required this.ncreaScore,

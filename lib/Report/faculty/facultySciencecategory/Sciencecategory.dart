@@ -9,14 +9,14 @@ import 'Mindfulness/level.dart';
 import 'Resilence/level.dart';
 import 'Teamwork/level.dart';
 
-class FSKTM extends StatefulWidget {
-  const FSKTM({Key? key}) : super(key: key);
+class Science extends StatefulWidget {
+  const Science({Key? key}) : super(key: key);
 
   @override
-  _FSKTMState createState() => _FSKTMState();
+  _ScienceState createState() => _ScienceState();
 }
 
-class _FSKTMState extends State<FSKTM> {
+class _ScienceState extends State<Science> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class _FSKTMState extends State<FSKTM> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM',
+        title: Text('Science',
           style: TextStyle(
             color: Colors.white,
           ),),
@@ -44,7 +44,7 @@ class _FSKTMState extends State<FSKTM> {
         children: [
 
           //Adaptability
-          Material( color: Colors.deepPurple[200],
+          Material( color: Colors.amber[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -81,7 +81,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Communication
-          Material( color: Colors.deepPurple[400],
+          Material( color: Colors.amber[400],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -119,7 +119,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Emotional Intelligence
-          Material( color: Colors.deepPurple[200],
+          Material( color: Colors.amber[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -157,7 +157,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Integrity
-          Material( color: Colors.deepPurple[400],
+          Material( color: Colors.amber[400],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -195,7 +195,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Mindfulness
-          Material( color: Colors.deepPurple[200],
+          Material( color: Colors.amber[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -233,7 +233,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Resilence
-          Material( color: Colors.deepPurple[400],
+          Material( color: Colors.amber[400],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -271,7 +271,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Teamwork
-          Material( color: Colors.deepPurple[200],
+          Material( color: Colors.amber[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -309,7 +309,7 @@ class _FSKTMState extends State<FSKTM> {
           ),
 
           //Creativity
-          Material( color: Colors.deepPurple[400],
+          Material( color: Colors.amber[400],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),

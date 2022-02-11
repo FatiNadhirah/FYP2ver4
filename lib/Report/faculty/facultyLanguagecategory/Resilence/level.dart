@@ -26,7 +26,7 @@ class _ResiLevelState extends State<ResiLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Resilience',
+        title: Text('Language > Resilience',
           style: TextStyle(
             color: Colors.white,
           ),),

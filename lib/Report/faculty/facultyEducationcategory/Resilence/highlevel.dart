@@ -8,7 +8,7 @@ class ResiHigh extends StatefulWidget {
 
 class _ResiHighState extends State<ResiHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("resiLevel",isEqualTo: "High").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("resiLevel",isEqualTo: "High").where("faculty", isEqualTo: "Education").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ResiHighState extends State<ResiHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > High Resilience'),
+        title: Text('Education > High Resilience'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

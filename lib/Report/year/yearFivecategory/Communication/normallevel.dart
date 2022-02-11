@@ -9,7 +9,7 @@ class ComNormal extends StatefulWidget {
 
 class _ComNormalState extends State<ComNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("comLevel",isEqualTo: "Normal").where("year", isEqualTo: "1").snapshots();
+  FirebaseFirestore.instance.collection('users').where("comLevel",isEqualTo: "Normal").where("year", isEqualTo: "5").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _ComNormalState extends State<ComNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > Normal Communication'),
+        title: Text('Year 5 > Normal Communication'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

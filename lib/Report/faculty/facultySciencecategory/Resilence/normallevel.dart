@@ -8,7 +8,7 @@ class ResiNormal extends StatefulWidget {
 
 class _ResiNormalState extends State<ResiNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("resiLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("resiLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "Science").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ResiNormalState extends State<ResiNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Normal Resitability'),
+        title: Text('Science > Normal Resitability'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

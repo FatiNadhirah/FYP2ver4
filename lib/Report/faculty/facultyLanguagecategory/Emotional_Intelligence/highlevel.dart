@@ -8,7 +8,7 @@ class EmoHigh extends StatefulWidget {
 
 class _EmoHighState extends State<EmoHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("emoLevel",isEqualTo: "High").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("emoLevel",isEqualTo: "High").where("faculty", isEqualTo: "Language").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _EmoHighState extends State<EmoHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > High Emotional Intellience'),
+        title: Text('Language > High Emotional Intellience'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

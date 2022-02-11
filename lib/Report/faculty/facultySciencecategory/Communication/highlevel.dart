@@ -8,7 +8,7 @@ class ComHigh extends StatefulWidget {
 
 class _ComHighState extends State<ComHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("comLevel",isEqualTo: "High").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("comLevel",isEqualTo: "High").where("faculty", isEqualTo: "Science").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ComHighState extends State<ComHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > High Communication'),
+        title: Text('Science > High Communication'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

@@ -8,7 +8,7 @@ class CreaLow extends StatefulWidget {
 
 class _CreaLowState extends State<CreaLow> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "Low").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("creaLevel",isEqualTo: "Low").where("faculty", isEqualTo: "Language").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _CreaLowState extends State<CreaLow> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Low Adaptability'),
+        title: Text('Language > Low Adaptability'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

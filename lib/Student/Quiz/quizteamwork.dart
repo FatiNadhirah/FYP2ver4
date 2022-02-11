@@ -4,6 +4,7 @@ import 'package:page_transition/page_transition.dart';
 import 'quizresilience.dart';
 import 'result.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:umpds_test_sixedit/Student/newresult.dart';
 
 class quizTeam extends StatefulWidget {
   final int resiLength;
@@ -298,14 +299,15 @@ class _quizTeamState extends State<quizTeam> {
               MaterialButton(
                 onPressed: () {
                   //Navigator.push(context, MaterialPageRoute(builder: (context) => Loading()));
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Result(teamMarks: teamMarks, teamLength: teamLength,
-                                                                                          resiMarks: widget.resiMarks, resiLength: widget.resiLength,
-                                                                                          mindMarks: widget.mindMarks, mindLength: widget.mindLength,
-                                                                                          integMarks: widget.integMarks, integLength: widget.integLength,
-                                                                                          emoMarks: widget.emoMarks, emoLength: widget.emoLength,
-                                                                                          creaMarks: widget.creaMarks, creaLength: widget.creaLength,
-                                                                                          comMarks: widget.comMarks, comLength: widget.comLength,
-                                                                                          adapMarks: widget.adapMarks,adapLength: widget.adapLength,)));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => Result(teamMarks: teamMarks, teamLength: teamLength,
+                  //                                                                         resiMarks: widget.resiMarks, resiLength: widget.resiLength,
+                  //                                                                         mindMarks: widget.mindMarks, mindLength: widget.mindLength,
+                  //                                                                         integMarks: widget.integMarks, integLength: widget.integLength,
+                  //                                                                         emoMarks: widget.emoMarks, emoLength: widget.emoLength,
+                  //                                                                         creaMarks: widget.creaMarks, creaLength: widget.creaLength,
+                  //                                                                         comMarks: widget.comMarks, comLength: widget.comLength,
+                  //                                                                         adapMarks: widget.adapMarks,adapLength: widget.adapLength,)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NewResult())); //newresult.dart
                   firestoreInstance.collection("users").doc(firebaseUser?.uid).set(
                       {
                         "teamScore" : teamMarks/(teamLength*10)*100,

@@ -20,14 +20,14 @@ class _NewResultState extends State<NewResult> {
 
   String userid = "userid";
   String email = "email";
-  int adapScore = 0;
-  int comScore = 0;
-  int creaScore = 0;
-  int emoScore = 0;
-  int integScore = 0;
-  int mindScore = 0;
-  int resiScore = 0;
-  int teamScore = 0;
+  double adapScore = 0;
+  double comScore = 0;
+  double creaScore = 0;
+  double emoScore = 0;
+  double integScore = 0;
+  double mindScore = 0;
+  double resiScore = 0;
+  double teamScore = 0;
 
 
   @override
@@ -37,20 +37,6 @@ class _NewResultState extends State<NewResult> {
         leading: IconButton(
           onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => Student_Dashboard()));
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ExistResult(nadapScore: adapScore,
-                    ncomScore: comScore,
-                    ncreaScore: creaScore,
-                    nemoScore: emoScore,
-                    nintegScore: integScore,
-                    nmindScore: mindScore,
-                    nresiScore: resiScore,
-                    nteamScore: teamScore
-                ),
-              ),
-            );
           },
           icon: Icon(Icons.arrow_back,
             size: 30.0,
@@ -89,7 +75,7 @@ class _NewResultState extends State<NewResult> {
                                   // SizedBox(
                                   //   width: 215,
                                   // ),
-                                  Text((adapScore).toStringAsFixed(0)+ "%",
+                                  Text((adapScore).toStringAsFixed(0) + "%",
                                     style: TextStyle(
                                         fontSize: 18
                                     ),

@@ -26,7 +26,7 @@ class _AdapLevelState extends State<AdapLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Adaptabilty',
+        title: Text('Language > Adaptabilty',
           style: TextStyle(
             color: Colors.white,
           ),),

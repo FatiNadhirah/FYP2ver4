@@ -114,7 +114,7 @@ class _quizMindState extends State<quizMind> {
                       firestoreInstance.collection("users").doc(firebaseUser?.uid).set(
                           {
                             "mindScore" : mindMarks/(mindLength*10)*100,
-                            if(mindMarks/(mindLength*10)*100 > 50)
+                            if(mindMarks/(mindLength*10)*100 > 50 )
                               "mindLevel" : "High",
                             if(mindMarks/(mindLength*10)*100 < 50)
                               "mindLevel" : "Low",

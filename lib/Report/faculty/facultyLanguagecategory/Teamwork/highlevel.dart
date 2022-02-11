@@ -8,7 +8,7 @@ class TeamHigh extends StatefulWidget {
 
 class _TeamHighState extends State<TeamHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("teamLevel",isEqualTo: "High").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("teamLevel",isEqualTo: "High").where("faculty", isEqualTo: "Language").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _TeamHighState extends State<TeamHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > High Teamwork'),
+        title: Text('Language > High Teamwork'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

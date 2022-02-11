@@ -70,7 +70,7 @@ class _TeamNormalState extends State<TeamNormal> {
                         ),
                         child: ListTile(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(0),
                             side: BorderSide(
                               color: Colors.black,
                             ),
@@ -81,9 +81,15 @@ class _TeamNormalState extends State<TeamNormal> {
                               fontSize: 20,
                             ),
                           ),
-                          // subtitle: Text(
-                          //     snapshot.data!.docChanges[index].doc['email']
-                          // ),
+                          subtitle: Text(
+                            snapshot.data!.docChanges[index].doc['faculty'] + "         Year " + snapshot.data!.docChanges[index].doc['year']
+                          ),
+                          trailing: Text(
+                              (snapshot.data!.docChanges[index].doc['teamScore']).toStringAsFixed(0) + "%",
+                            style: TextStyle(
+                              fontSize: 20
+                            ),
+                          ),
                           contentPadding: EdgeInsets.symmetric(
                             horizontal: 16,
                             vertical: 6,

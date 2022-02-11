@@ -109,7 +109,7 @@ class _quizIntegState extends State<quizInteg> {
                       firestoreInstance.collection("users").doc(firebaseUser?.uid).set(
                           {
                             "integScore" : integMarks/(integLength*10)*100,
-                            if(integMarks/(integLength*10)*100 > 50)
+                            if(integMarks/(integLength*10)*100 > 50 )
                               "integLevel" : "High",
                             if(integMarks/(integLength*10)*100 < 50)
                               "integLevel" : "Low",

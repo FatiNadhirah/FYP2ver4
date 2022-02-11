@@ -65,7 +65,7 @@ class _IntegHighState extends State<IntegHigh> {
                         ),
                         child: ListTile(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(0),
                             side: BorderSide(
                               color: Colors.black,
                             ),
@@ -76,9 +76,15 @@ class _IntegHighState extends State<IntegHigh> {
                               fontSize: 20,
                             ),
                           ),
-                          // subtitle: Text(
-                          //   snapshot.data!.docChanges[index].doc['email']
-                          // ),
+                          subtitle: Text(
+                              snapshot.data!.docChanges[index].doc['department'] + "         Year " + snapshot.data!.docChanges[index].doc['year']
+                          ),
+                          trailing: Text(
+                            (snapshot.data!.docChanges[index].doc['integScore']).toStringAsFixed(0) + "%",
+                            style: TextStyle(
+                                fontSize: 20
+                            ),
+                          ),
                           contentPadding: EdgeInsets.symmetric(
                             horizontal: 16,
                             vertical: 6,

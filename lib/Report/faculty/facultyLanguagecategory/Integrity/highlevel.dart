@@ -8,7 +8,7 @@ class IntegHigh extends StatefulWidget {
 
 class _IntegHighState extends State<IntegHigh> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("integLevel",isEqualTo: "High").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("integLevel",isEqualTo: "High").where("faculty", isEqualTo: "Language").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _IntegHighState extends State<IntegHigh> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > High Integrity'),
+        title: Text('Language > High Integrity'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

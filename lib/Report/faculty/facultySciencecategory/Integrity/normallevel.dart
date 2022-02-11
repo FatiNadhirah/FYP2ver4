@@ -8,7 +8,7 @@ class IntegNormal extends StatefulWidget {
 
 class _IntegNormalState extends State<IntegNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("integLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "FSKTM").snapshots();
+  FirebaseFirestore.instance.collection('users').where("integLevel",isEqualTo: "Normal").where("faculty", isEqualTo: "Science").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _IntegNormalState extends State<IntegNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('FSKTM > Normal Integrity'),
+        title: Text('Science > Normal Integrity'),
       ),
       body: StreamBuilder(
         stream: _usersStream,

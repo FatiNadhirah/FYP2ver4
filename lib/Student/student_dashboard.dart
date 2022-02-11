@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:umpds_test_sixedit/Student/student_profile2.dart';
 import 'package:umpds_test_sixedit/Welcome/welcome.dart';
 import 'package:umpds_test_sixedit/Student/Quiz/quizadaptability.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'newresult.dart';
 import 'package:umpds_test_sixedit/profile.dart';
+import 'student_dashboard2.dart';
 
 
 class Student_Dashboard extends StatefulWidget {
@@ -87,7 +89,7 @@ class _Student_DashboardState extends State<Student_Dashboard> {
                           padding: const EdgeInsets.all(5.0),
                           child: TextButton(
                             onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile())); //to student_profile2.dart
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => StudentProfile2())); //to student_profile2.dart
                             },
                             child: Text("Profile",
                               style: TextStyle(

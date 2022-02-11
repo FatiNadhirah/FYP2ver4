@@ -26,14 +26,14 @@ class _IntegLevelState extends State<IntegLevel> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > Integrity ',
+        title: Text('Year 4 > Integrity ',
           style: TextStyle(
             color: Colors.white,
           ),),
       ),
       body: StaggeredGridView.count(
         crossAxisCount: 2,
-        crossAxisSpacing: 15.0,
+        crossAxisSpacing: 45.0,
         mainAxisSpacing: 20.0,
         padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 40.0),
         children: [

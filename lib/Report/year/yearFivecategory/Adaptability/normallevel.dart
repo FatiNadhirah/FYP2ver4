@@ -9,7 +9,7 @@ class AdapNormal extends StatefulWidget {
 
 class _AdapNormalState extends State<AdapNormal> {
   final Stream<QuerySnapshot> _usersStream =
-  FirebaseFirestore.instance.collection('users').where("adapLevel",isEqualTo: "Normal").where("year", isEqualTo: "1").snapshots();
+  FirebaseFirestore.instance.collection('users').where("adapLevel",isEqualTo: "Normal").where("year", isEqualTo: "5").snapshots();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _AdapNormalState extends State<AdapNormal> {
             size: 30.0,
             color: Colors.white,),
         ),
-        title: Text('Year 1 > Normal Adaptability'),
+        title: Text('Year 5 > Normal Adaptability'),
       ),
       body: StreamBuilder(
         stream: _usersStream,
