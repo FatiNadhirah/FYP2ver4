@@ -76,7 +76,7 @@ class _FilterByState extends State<FilterBy> {
           ),
 
           //Year
-          Material( color: Colors.blue[600],
+          Material( color: Colors.blue[200],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),

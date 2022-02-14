@@ -192,7 +192,7 @@ class _FacultyFilterState extends State<FacultyFilter> {
           ),
 
           //Language
-          Material( color: Colors.cyanAccent[300],
+          Material( color: Colors.cyan[300],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
@@ -229,7 +229,7 @@ class _FacultyFilterState extends State<FacultyFilter> {
           ),
 
           //Science
-          Material( color: Colors.amberAccent[300],
+          Material( color: Colors.amber[300],
             elevation: 10.0,
             shadowColor: Colors.grey,
             borderRadius: BorderRadius.circular(24.0),
